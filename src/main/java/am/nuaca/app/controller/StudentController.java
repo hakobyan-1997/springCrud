@@ -35,5 +35,10 @@ public class StudentController {
         studentService.deleteStudentById(id);
     }
 
+    @RequestMapping(value = "/findByName/{name}", method = RequestMethod.POST)
+    public Student findStudent(@PathVariable String name){
+        return studentService.findStudent(name);
+    }
+
 
 }

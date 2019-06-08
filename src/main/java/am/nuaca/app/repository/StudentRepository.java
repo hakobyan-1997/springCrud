@@ -12,4 +12,6 @@ public interface StudentRepository extends JpaRepository <Student, Integer> {
 
     @Override
     void deleteById(Integer integer);
+
+    Student findByFname(String name);
 }
