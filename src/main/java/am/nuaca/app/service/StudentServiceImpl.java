@@ -27,11 +27,6 @@ public class StudentServiceImpl implements StudentService {
     public Optional<Student> updateStudent(Student student, int id) {
         Optional<Student> mystudent  = studentRepository.findById(id);
         student.setId(id);
-      /*  student.setFname(student.getFname());
-        student.setLname();
-        student.setRating();
-        student.setAge();*/
-
         studentRepository.save(student);
         return mystudent;
     }
